@@ -27,4 +27,12 @@ public class TypePage {
 	@FindBy(xpath = "//h2[text()='Where would you like your appointment?']")
 	private WebElement wherewouldyoulikeyourappointment_txt;
 	
+	@FindBy(xpath = "//input[@value='In Person']")
+	private WebElement inPerson_rb;
+	
+	@FindBy(xpath = "//a[text()='Previous']")
+	private WebElement previous_btn;
+	
+	@FindBy(xpath = "//a[text()='Next']")
+	private WebElement next_btn;
 }
