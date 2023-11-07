@@ -26,7 +26,7 @@ public class SignInPage {
 	@FindBy(xpath = "//p[text()= ' Email']")
 	private WebElement email_btn;
 	
-	//locators
+	//locator
 	
 	
 }
