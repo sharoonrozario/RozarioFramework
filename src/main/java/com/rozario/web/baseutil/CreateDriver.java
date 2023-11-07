@@ -14,6 +14,10 @@ public class CreateDriver {
 	private static String BROWSER_NAME = "";
 	private static WebDriver driver;
 	
+	/*
+	 * @author : SharoonRozario
+	 * @Description : Launches the browser 
+	 */
 	public synchronized void launchBrowser() throws FileNotFoundException, IOException {
 		BROWSER_NAME = new DataExtraction().getDataFromProperties("browser");
 		if(BROWSER_NAME.equalsIgnoreCase("chrome")) {
