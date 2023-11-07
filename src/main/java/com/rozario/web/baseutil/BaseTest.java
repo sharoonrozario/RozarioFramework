@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import com.rozario.web.fileoperation.DataExtraction;
 
 public class BaseTest {
-	public WebDriver driver;
+	public static WebDriver driver;
 	
 	@Test
 	public void run() throws FileNotFoundException, IOException {
