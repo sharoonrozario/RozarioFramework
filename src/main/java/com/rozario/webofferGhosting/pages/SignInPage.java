@@ -7,9 +7,11 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SignInPage {
 	public WebDriver driver;
-	public SignInPage(WebDriver driver) {
+	public int ETO;
+	public SignInPage(WebDriver driver , int ETO) {
 		PageFactory.initElements(driver, this);
 		this.driver = driver;
+		this.ETO = ETO;
 	}
 	@FindBy(xpath = "//a[text()='Register.']")
 	private WebElement register_txt;
