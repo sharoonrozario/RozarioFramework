@@ -13,7 +13,6 @@ import org.openqa.selenium.support.PageFactory;
 //DropDown-->dd
 
 
-
 public class TypePage {
 	public WebDriver driver;
 	public TypePage(WebDriver driver) {
@@ -107,13 +106,35 @@ public class TypePage {
 	@FindBy(xpath="//a[text()='Terms & Conditions']")
 	private WebElement termsConditions_txt;
 	
-	
 	@FindBy(xpath="//h3[text()='Contact Information']")
 	private WebElement contactInformation_txt;
+	
+	@FindBy(linkText="Phone : +67 0112 11111")
+	private WebElement phone_txt;
+	
+	@FindBy(linkText="Email to : demo@example.com")
+	private WebElement emailto_txt;
+	
+	@FindBy(linkText ="Website : www.example.com")
+	private WebElement website;
+	
+	@FindBy(linkText ="Address : Example address")
+	private WebElement address;
 	
 	@FindBy(xpath="//h3[text()='Payment Method']")
 	private WebElement paymentMethod_txt;
 	
+	@FindBy(xpath="(//i[@class='fab fa-instagram fs-13'])[2]")
+	private WebElement fabfainstagramfs13_txt1;
+	
+	@FindBy(xpath ="(//i[@class='fab fa-twitter fs-13'])[1]")
+	private WebElement fabfatwitterfs13_txt1;
+	
+	@FindBy(xpath ="(//i[@class='fab fa-youtube fs-13'])[1]")
+	private WebElement fabfayoutubefs13_txt1;
+	
+	@FindBy(xpath ="(//i[@class='fab fa-facebook-f fs-13'])[1]")
+	private WebElement fabfafacebookffs13_txt1;	
 
 	
 		
