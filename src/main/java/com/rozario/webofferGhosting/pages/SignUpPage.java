@@ -54,5 +54,26 @@ public class SignUpPage {
 	@FindBy(xpath = "//span[text()='Go Back']")
 	private WebElement goBack_btn;
 	
-//sg
+    // register page
+	
+	@FindBy(xpath = "//h3[text()='Sign up']")
+	private WebElement signUp_txt1;
+	
+	@FindBy(xpath = "//a[text()='Login']")
+	private WebElement login_btn1;
+	
+	@FindBy(xpath = "//input[@name='email']")
+	private WebElement email_tb;
+	
+	@FindBy(xpath = "//input[@name='password']")
+	private WebElement password_tb;
+	
+	@FindBy(xpath = "//p[text()='account']")
+	private WebElement account_btn;
+	
+	@FindBy(xpath = "//span[text()='Go Back']")
+	private WebElement goBack_btn1;
+	
 }
+
+
