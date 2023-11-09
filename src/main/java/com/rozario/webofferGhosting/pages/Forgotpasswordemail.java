@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Forgotpasswordemail {
+public class ForgotPasswordEmailPage {
 public WebDriver driver;
 public int ETO;
 public Forgotpasswordemail(WebDriver driver , int ETO) {
@@ -52,8 +52,7 @@ private WebElement forgotPassword_btn;
 @FindBy(xpath = "//span[text()='Go Back']")
 private WebElement goBack_btn;
 
-//forgotPassword?
-
+//forgotPassword
 @FindBy(xpath = "//input[@id='email-login']")
 private WebElement emailLogin_tb;
 
@@ -62,7 +61,4 @@ private WebElement resetPassword_btn;
 
 @FindBy(xpath = "//h6[text()=' Back to Login']")
 private WebElement backtoLogin_btn;
-
-
-
 }
