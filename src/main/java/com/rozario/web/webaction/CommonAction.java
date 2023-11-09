@@ -13,7 +13,7 @@ public class CommonAction {
 	public WebDriverWait explicitWait;
 	public Actions action;
 
-	public CommonAction(WebDriver driver, Actions action) {
+	public CommonAction(WebDriver driver, Actions action, WebDriverWait explicitWait) {
 		this.driver = driver;
 		this.ETO = ETO;
 		this.explicitWait = explicitWait;

@@ -27,6 +27,7 @@ public class SignInPage {
 	
 	@FindBy(xpath = "//p[text()= ' Email']")
 	private WebElement email_btn;
+	
 	public WebElement getRegister_txt() {
 		return register_txt;
 	}

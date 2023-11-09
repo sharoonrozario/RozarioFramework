@@ -18,7 +18,7 @@ public class SignUpPage {
 	@FindBy(xpath = "//h3[text()= 'Sign up']")
 	private WebElement signUp_txt;
 	
-	@FindBy(xpath = "//a[text()= 'Login']")
+	@FindBy(xpath = "//button[text()= 'Login']")
 	private WebElement login_btn;
 	
 	@FindBy(xpath = "//span[text()= ' Google']")
@@ -170,6 +170,45 @@ public class SignUpPage {
 	@FindBy(xpath = "//input[@name='password']")
 	private WebElement password_tb;
 	
+	public WebElement getSignUp_txt1() {
+		return signUp_txt1;
+	}
+
+	public void setSignUp_txt1(WebElement signUp_txt1) {
+		this.signUp_txt1 = signUp_txt1;
+	}
+
+	public WebElement getLogin_btn1() {
+		return login_btn1;
+	}
+
+	public void setLogin_btn1(WebElement login_btn1) {
+		this.login_btn1 = login_btn1;
+	}
+
+	public WebElement getEmail_tb() {
+		return email_tb;
+	}
+
+	public void setEmail_tb(WebElement email_tb) {
+		this.email_tb = email_tb;
+	}
+
+	public WebElement getPassword_tb() {
+		return password_tb;
+	}
+
+	public void setPassword_tb(WebElement password_tb) {
+		this.password_tb = password_tb;
+	}
+
+	public WebElement getAccount_btn() {
+		return account_btn;
+	}
+
+	public void setAccount_btn(WebElement account_btn) {
+		this.account_btn = account_btn;
+	}
 	@FindBy(xpath = "//p[text()='account']")
 	private WebElement account_btn;
 }
