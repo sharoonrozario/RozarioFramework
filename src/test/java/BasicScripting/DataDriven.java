@@ -55,9 +55,11 @@ public class DataDriven {
 		 commonAction.inputValue(signUpPage.getPassword_tb(), "Abjgd##1008");
 		 commonAction.click(signUpPage.getLogin_btn());
 		 commonAction.click(homePage.getReportGhosting_btn());
-		 commonAction.inputValue(reportGhostingPage.getEnterPanCardDetail_tb(), "NFIPS1576F");
+		 commonAction.inputValue(reportGhostingPage.getEnterPanCardDetail_tb(), "BB12FF12Y");
+		 commonAction.inputValue(reportGhostingPage.getCandidateName_tb(),"Ananya");
+		 commonAction.inputValue(reportGhostingPage.getEnterPersonalemail_tb(), "ananya@sumerudigital.com");
+		 
 		 selectJobType("Internship");
-		 Thread.sleep(5000);
 		 
 		}
 		finally {
