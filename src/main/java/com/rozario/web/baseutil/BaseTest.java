@@ -53,7 +53,7 @@ public class BaseTest {
 		pages = new InitializePage(driver, ETO);
 		action = new Actions(driver);
 		propertyFile = new DataExtraction();
-		commonAction = new CommonAction(driver, action);
+		commonAction = new CommonAction(driver, action, explicitWait);
 	}
 	
 	/*
