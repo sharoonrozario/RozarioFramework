@@ -12,6 +12,7 @@ import org.testng.annotations.Test;
 import com.rozario.web.fileoperation.DataExtraction;
 import com.rozario.web.webaction.CommonAction;
 import com.rozario.webofferGhosting.pages.ForgotPasswordEmailPage;
+import com.rozario.webofferGhosting.pages.HomePage;
 import com.rozario.webofferGhosting.pages.SignInPage;
 import com.rozario.webofferGhosting.pages.SignUpPage;
 
@@ -25,6 +26,7 @@ public class DataDriven {
 	public static SignUpPage signUpPage;
 	public static SignInPage signInPage;
 	public static ForgotPasswordEmailPage forgotPasswordEmailPage;
+	public static HomePage homePage;
 	
 	
     @org.junit.Test
@@ -39,6 +41,7 @@ public class DataDriven {
 		 signUpPage = new SignUpPage(driver, ETO);
 		 signInPage = new SignInPage(driver, ETO);
 		 forgotPasswordEmailPage = new ForgotPasswordEmailPage(driver, ETO);
+		 homePage = new HomePage(driver, ETO);
 		 
 		 driver.manage().window().maximize();
 		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(ETO));
@@ -47,7 +50,8 @@ public class DataDriven {
 		 commonAction.inputValue(signUpPage.getEmail_tb(), "ananya@sumerudigital.com");
 		 commonAction.inputValue(signUpPage.getPassword_tb(), "Abjgd##1008");
 		 commonAction.click(signUpPage.getLogin_btn());
-		 Thread.sleep(5000);
+		 commonAction.click(homePage.getReportGhosting_btn());
+		 
 		 
 		}
 		finally {
