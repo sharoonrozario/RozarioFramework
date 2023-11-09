@@ -16,7 +16,17 @@ public class ReportGhostingPage {
 	
 	@FindBy(xpath = "//input[@placeholder ='Enter PAN Card details']")
 	private WebElement enterPanCardDetail_tb;
-	
-	
 
+	@FindBy(xpath = "//button[text()='search']")
+	private WebElement search_btn;
+	
+	@FindBy(xpath = "//input[@name='candidateName']")
+	private WebElement candidateName_tb;
+	
+	@FindBy(xpath = "//input[@placeholder='Enter Personal Email']")
+	private WebElement enterPersonalemail_tb;
+	
+	@FindBy(xpath = "//input[@placeholder='Enter 10 Digit Number']")
+	private WebElement enter10DigitNumber_tb;
+	
 }
