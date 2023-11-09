@@ -9,6 +9,7 @@ public class ForgotPasswordEmailPage {
 public WebDriver driver;
 public int ETO;
 public ForgotPasswordEmailPage(WebDriver driver , int ETO) {
+public ForgotPasswordEmailPage(WebDriver driver,int ETO) {
 	PageFactory.initElements(driver, this);
 	this.driver = driver;
 	this.ETO = ETO;

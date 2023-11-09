@@ -2,6 +2,7 @@ package com.rozario.web.webaction;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
@@ -10,11 +11,14 @@ public class CommonAction {
 	public static WebDriver driver;
 	public static int ETO;
 	public WebDriverWait explicitWait;
+	public Actions action;
 
-	public CommonAction(WebDriver driver) {
+	public CommonAction(WebDriver driver, Actions action) {
 		this.driver = driver;
 		this.ETO = ETO;
 		this.explicitWait = explicitWait;
+		this.action = action;
+		
 	}
 
 
@@ -78,5 +82,7 @@ public class CommonAction {
 		waitUntilClickable(element);
 		element.click();
 	}
+	
+	
 	
 }

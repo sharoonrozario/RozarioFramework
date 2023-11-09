@@ -4,8 +4,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
 
-import org.junit.BeforeClass;
-import org.junit.Test;
+
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -13,10 +13,11 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 import com.rozario.web.fileoperation.DataExtraction;
+import com.rozario.web.webaction.CommonAction;
 import com.rozario.webofferGhosting.pages.SignInPage;
 
 public class BaseTest {
@@ -28,8 +29,9 @@ public class BaseTest {
 	public static InitializePage pages;
 	public static Actions action;
 	public static DataExtraction propertyFile;
+	public static CommonAction commonAction;
 	
-	/*
+	
 	@BeforeClass
 	public void LaunchBrowser() throws FileNotFoundException, IOException {
 		cd.launchBrowser();
@@ -44,21 +46,17 @@ public class BaseTest {
 		driver.quit();
 	}
 	
-	@BeforeClass
-	public static void openApplication() throws FileNotFoundException, IOException {
-		driver.get(propertyFile.getDataFromProperties("URL"));
-	}
-	
 	private void createObjects() {
 		cd = new CreateDriver();
 		driver = cd.getDriver();
 		explicitWait = new WebDriverWait(driver, Duration.ofSeconds(ETO));
 		pages = new InitializePage(driver, ETO);
 		action = new Actions(driver);
-		propertyFile = new DataExtraction();		
+		propertyFile = new DataExtraction();
+		commonAction = new CommonAction(driver, action);
 	}
-	*/
 	
+	/*
 	@Test
 	public void run1() throws Exception{
 		try {
@@ -70,11 +68,23 @@ public class BaseTest {
 		propertyFile = new DataExtraction();
 		driver.get(propertyFile.getDataFromProperties("URL"));
 		driver.manage().window().maximize();
+		commonAction = new CommonAction(driver);
+		
+		
+		//Scripting 
+		commonAction.click(pages.signInPage.getEmail_btn());
+		commonAction.inputValue(pages.signUpPage.getEnterYourName_tb(), "Sharoon");
+		commonAction.click(pages.signUpPage.getContinueButton_btn());
+		commonAction.inputValue(pages.signUpPage.getEnterYourName_tb(),"sharoon.rozario@allen.in");
+		
+		
 		Thread.sleep(5000);
 		}
 		finally {
 			driver.close();
 			driver.quit();
 		}
+		
 	}
+	*/
 }
