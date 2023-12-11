@@ -70,7 +70,7 @@ public class DataDriven {
 			driver.quit();
 		}
 	}
-    //abcd kusuma is crazy, yes, because kk made so
+    //abcd jsbyrgjsbrjh
     
     public void selectJobType(String name) throws Exception{
     	commonAction.click(organaisationReportGhostingPage.getTypeOfEmployment_dd());

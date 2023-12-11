@@ -58,8 +58,9 @@ public class CandidateProfilePage {
 	@FindBy(xpath = "//div[contains(@class, 'MuiStack-root')]/h6[text()='Skills:']")
 	private WebElement muiStackrootSkills_txt;
 
-	@FindBy(xpath = "//button[contains(text(),'Edit Details')]")
-	private WebElement editDetails_btn;
+//	@FindBy(xpath = "//button[contains(text(),'Edit Details')]")
+//	private WebElement editDetails_btn;
+	//dont need it, i am  great
 	
 
 }
